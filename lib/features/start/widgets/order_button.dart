@@ -16,13 +16,9 @@ class OrderButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-          elevation: 5,
+          elevation: 8,
           backgroundColor: Colors.transparent,
-          shadowColor: Colors.black,
-        ).copyWith(
-          backgroundColor: WidgetStateProperty.resolveWith<Color>(
-            (states) => Colors.transparent,
-          ),
+          shadowColor: const Color.fromARGB(137, 255, 174, 225),
         ),
         child: Ink(
           decoration: BoxDecoration(
