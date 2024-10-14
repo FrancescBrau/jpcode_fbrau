@@ -29,7 +29,7 @@ class OrderPopUp extends StatelessWidget {
         const SizedBox(height: 40),
         OrderButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/order');
+            Navigator.pushNamed(context, '/main');
           },
         ),
       ],
