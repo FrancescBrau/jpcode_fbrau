@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'widgets/order_button.dart';
+import 'package:jpcode/features/start/widgets/order_popup.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -40,34 +40,7 @@ class StartScreen extends StatelessWidget {
                           .withOpacity(0.8),
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Text(
-                          'Feeling Snackish Today?',
-                          style: TextStyle(
-                            fontSize: 32,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        const Text(
-                          "Explore Angi's most popular snack selection and get instantly happy.",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white70,
-                          ),
-                        ),
-                        const SizedBox(height: 40),
-                        OrderButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/order');
-                          },
-                        ),
-                      ],
-                    ),
+                    child: const OrderPopUp(),
                   ),
                 ),
               ),
