@@ -1,6 +1,6 @@
 name: jpcode
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -17,3 +17,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/details/
+    - assets/images/grafs/
+    - assets/images/hintergruende/
+
+  fonts:
+    - family: AfacadFlux
+      fonts:
+        - asset: assets/fonts/AfacadFlux-Regular.ttf

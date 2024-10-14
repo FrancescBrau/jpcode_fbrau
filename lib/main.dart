@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jpcode/features/start/start_screen.dart';
 
 void main() {
   runApp(const JpApp());
@@ -9,12 +10,15 @@ class JpApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello JP!'),
-        ),
-      ),
+    return MaterialApp(
+      title: 'JP App',
+      theme: ThemeData(fontFamily: 'AfacadFlux'),
+      initialRoute: '/start',
+      routes: {
+        '/start': (context) => const StartScreen(),
+        //'/main': (context) => MainScreen(),
+        //'/singleView': (context) => SingleViewScreen
+      },
     );
   }
 }
