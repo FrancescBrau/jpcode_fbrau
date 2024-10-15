@@ -1,5 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:jpcode/features/main/widgets/card.dart';
+import 'package:jpcode/features/main/widgets/central_card.dart';
+import 'package:jpcode/features/main/widgets/scroll/baluscard.dart';
+import 'package:jpcode/features/main/widgets/scroll/creamiescard.dart';
+import 'package:jpcode/features/main/widgets/scroll/mogliscard.dart';
+import 'package:jpcode/features/main/widgets/scroll/scroll_cards.dart';
 import 'widgets/category_container.dart';
 import 'widgets/category_dropdown.dart';
 
@@ -26,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const Positioned(
             //title code starts here
             top: 70,
-            left: 20,
+            left: 25,
             right: 10,
             child: Center(
               child: Text(
@@ -42,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const Positioned(
             //categories and dropdown code starts here
             top: 170,
-            left: 20,
+            left: 25,
             right: 0,
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -64,13 +70,53 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ), //categories and dropdown ends here
+          Positioned(
+            top: 230,
+            left: 25,
+            child: Stack(
+              children: [
+                Image.asset("assets/images/details/Top Card.png"),
+              ],
+            ),
+          ),
+
           const Positioned(
             //here is code for burger card, found in ../widgets/cards.dart
             top: 230,
-            left: 20,
+            left: 25,
             right: 20,
             child: BurgerCard(), //code burger ends here
-          )
+          ),
+          const Positioned(
+            //subtitle code starts here
+            top: 500,
+            left: 25,
+            child: Text(
+              "We Recommend",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          //subtittle code ends here
+          Positioned(
+            top: 550,
+            left: 25,
+            right: 0,
+            child: SizedBox(
+              height: 270,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  MoglisCard(),
+                  BalusCard(),
+                  CreamiesCard(),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -8,30 +8,12 @@ class BurgerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(30),
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-            child: Container(
-              width: 400,
-              height: 290,
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(30),
-              ),
-            ),
-          ),
-        ),
-        Container(
+        const SizedBox(
           width: 400,
           height: 290,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            border: Border.all(color: Colors.grey, width: 1),
-          ),
         ),
         Positioned(
-          top: -55,
+          top: -75,
           left: 28,
           child: Transform.scale(
             scale: 0.5,
@@ -39,9 +21,9 @@ class BurgerCard extends StatelessWidget {
           ),
         ),
         const Positioned(
-          top: 20,
+          top: 15,
           left: 20,
-          child: const Text(
+          child: Text(
             "Angi's Yummy Burger",
             style: TextStyle(
               fontSize: 18,
@@ -51,7 +33,7 @@ class BurgerCard extends StatelessWidget {
           ),
         ),
         const Positioned(
-          top: 45,
+          top: 40,
           left: 20,
           child: Text(
             "Delish vegan burger  \nthat tastes like heaven ",
@@ -62,7 +44,7 @@ class BurgerCard extends StatelessWidget {
           ),
         ),
         const Positioned(
-          top: 90,
+          top: 85,
           left: 20,
           child: Text(
             '₳ 13.99',
@@ -74,7 +56,7 @@ class BurgerCard extends StatelessWidget {
           ),
         ),
         const Positioned(
-          top: 25,
+          top: 20,
           left: 280,
           child: Row(
             children: [
@@ -90,10 +72,10 @@ class BurgerCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 180,
-          left: 20,
+          top: 150,
+          left: 30,
           child: Container(
-            width: 120,
+            width: 90,
             height: 40,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
@@ -117,7 +99,8 @@ class BurgerCard extends StatelessWidget {
             child: const Center(
               child: Text('Add to order',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                   textAlign: TextAlign.center),
