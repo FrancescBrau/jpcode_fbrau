@@ -66,12 +66,8 @@ class _CategoryDropdownState extends State<CategoryDropdown> {
             child: Text(value),
           );
         }).toList(),
-        onChanged: (String? newValue) {
-          setState(() {
-            selectedCategory = newValue;
-          });
-        },
-        dropdownColor: Colors.white70,
+        onChanged: null,
+        dropdownColor: Colors.white,
       ),
     );
   }
