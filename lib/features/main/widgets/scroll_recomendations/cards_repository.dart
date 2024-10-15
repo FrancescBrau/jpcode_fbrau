@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-const double cardWidth = 195;
-const double cardHeight = 270;
+const double cardWidth = 220;
 const BorderRadius cardBorderRadius = BorderRadius.all(Radius.circular(30));
 
 class ScrollCards extends StatelessWidget {
@@ -13,8 +12,7 @@ class ScrollCards extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: cardWidth,
-      height: cardHeight,
-      margin: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [

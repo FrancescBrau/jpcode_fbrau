@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jpcode/features/main/main_screen.dart';
+import 'package:jpcode/features/single_view/page3_screen.dart';
 import 'package:jpcode/features/start/start_screen.dart';
 
 void main() {
@@ -14,11 +15,11 @@ class JpApp extends StatelessWidget {
     return MaterialApp(
       title: 'JP App',
       theme: ThemeData(fontFamily: 'AfacadFlux'),
-      initialRoute: '/main',
+      initialRoute: '/singleView',
       routes: {
         '/': (context) => const StartScreen(),
         '/main': (context) => const HomeScreen(),
-        //'/singleView': (context) => SingleViewScreen
+        '/singleView': (context) => const SingleViewScreen(),
       },
     );
   }

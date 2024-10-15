@@ -1,13 +1,10 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:jpcode/features/main/widgets/central_card.dart';
-import 'package:jpcode/features/main/widgets/scroll/baluscard.dart';
-import 'package:jpcode/features/main/widgets/scroll/creamiescard.dart';
-import 'package:jpcode/features/main/widgets/scroll/mogliscard.dart';
-import 'package:jpcode/features/main/widgets/scroll/scroll_cards.dart';
-import 'widgets/category_container.dart';
-import 'widgets/category_dropdown.dart';
+import 'package:jpcode/features/main/widgets/central_card/central_card.dart';
+import 'package:jpcode/features/main/widgets/scroll_recomendations/scroll_cards/baluscard.dart';
+import 'package:jpcode/features/main/widgets/scroll_recomendations/scroll_cards/creamiescard.dart';
+import 'package:jpcode/features/main/widgets/scroll_recomendations/scroll_cards/mogliscard.dart';
+import 'widgets/scroll_categories/category_container.dart';
+import 'widgets/scroll_categories/category_dropdown.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -57,15 +54,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   CategoryDropdown(),
                   SizedBox(width: 10),
-                  CategoryContainer(categoryName: 'Salty'),
+                  CategoryContainer(categoryName: 'Salty', isSelected: true),
                   SizedBox(width: 10),
-                  CategoryContainer(categoryName: 'Sweet'),
+                  CategoryContainer(categoryName: 'Sweet', isSelected: false),
                   SizedBox(width: 10),
-                  CategoryContainer(categoryName: 'Desserts'),
+                  CategoryContainer(
+                      categoryName: 'Desserts', isSelected: false),
                   SizedBox(width: 10),
-                  CategoryContainer(categoryName: 'Spicy'),
+                  CategoryContainer(categoryName: 'Spicy', isSelected: false),
                   SizedBox(width: 10),
-                  CategoryContainer(categoryName: 'Others'),
+                  CategoryContainer(categoryName: 'Others', isSelected: false),
                 ],
               ),
             ),
@@ -106,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
             left: 25,
             right: 0,
             child: SizedBox(
-              height: 270,
+              height: 280,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [
