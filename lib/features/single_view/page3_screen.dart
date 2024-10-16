@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:jpcode/features/single_view/widgets/add_to_order.dart';
 import 'package:jpcode/features/single_view/widgets/central_container.dart';
+import 'package:jpcode/features/single_view/widgets/counter.dart';
 import 'package:jpcode/features/single_view/widgets/small_medium_large_button.dart';
 
 class SingleViewScreen extends StatefulWidget {
@@ -82,10 +84,12 @@ class _SingleViewScreenState extends State<SingleViewScreen> {
           ),
           const Positioned(top: 270, child: CentralCard()),
           const Positioned(
-            top: 630,
-            left: 10,
+            top: 660,
+            left: 20,
             child: SmallMediumLargeButton(),
-          )
+          ),
+          const Positioned(top: 650, left: 245, child: Counter()),
+          const Positioned(top: 720, left: 25, child: AddToOrderButton()),
         ],
       ),
     );
