@@ -13,6 +13,8 @@ class StartScreen extends StatelessWidget {
           Image.asset(
             "assets/images/hintergruende/bg_startscreen.png",
             fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
           ),
           Positioned(
             top: 125,

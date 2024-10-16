@@ -58,7 +58,8 @@ class BalusCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Icon(Icons.favorite, color: Colors.red, size: 16),
+                    Icon(Icons.favorite_border,
+                        color: Colors.white70, size: 16),
                     SizedBox(width: 5),
                     Text(
                       "150",

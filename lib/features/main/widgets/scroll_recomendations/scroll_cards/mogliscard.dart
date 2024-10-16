@@ -62,7 +62,7 @@ class MoglisCard extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Icon(Icons.favorite, color: Colors.red, size: 16),
+                      Icon(Icons.favorite_border, color: Colors.grey, size: 16),
                       SizedBox(width: 5),
                       Text(
                         "200",
