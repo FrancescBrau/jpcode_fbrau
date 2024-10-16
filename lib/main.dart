@@ -15,7 +15,7 @@ class JpApp extends StatelessWidget {
     return MaterialApp(
       title: 'JP App',
       theme: ThemeData(fontFamily: 'AfacadFlux'),
-      initialRoute: '/singleView',
+      initialRoute: '/',
       routes: {
         '/': (context) => const StartScreen(),
         '/main': (context) => const HomeScreen(),
